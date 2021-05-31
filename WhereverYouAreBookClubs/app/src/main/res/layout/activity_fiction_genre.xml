@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FictionGenre">
+
+    <!--Toolbar-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/toolbar"
+            app:navigationIcon="@drawable/outline_arrow_back_24"
+            app:subtitle="@string/pick_genre"
+            app:subtitleTextColor="@color/white"
+            app:title="@string/fiction_genre" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/dystopian_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dystopian"
+        app:layout_constraintBottom_toTopOf="@+id/scifi_chip"
+        app:layout_constraintEnd_toStartOf="@+id/historical_fic_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fantasy_chip"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/short_story_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/short_story"
+        app:layout_constraintBottom_toTopOf="@+id/young_adult_chip"
+        app:layout_constraintEnd_toStartOf="@+id/horror_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/womens_fiction_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/thriller_sus_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thriller_suspense"
+        app:layout_constraintBottom_toTopOf="@+id/womens_fiction_chip"
+        app:layout_constraintEnd_toStartOf="@+id/romance_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scifi_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/womens_fiction_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/women_fiction"
+        app:layout_constraintBottom_toTopOf="@+id/short_story_chip"
+        app:layout_constraintEnd_toStartOf="@+id/contemporary_fic_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thriller_sus_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/historical_fic_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/historical_fiction"
+        app:layout_constraintBottom_toTopOf="@+id/action_adv_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dystopian_chip"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/graphic_novel_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/graphic_novel"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toStartOf="@+id/lit_fiction_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/young_adult_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/contemporary_fic_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contemporary_fiction"
+        app:layout_constraintBottom_toTopOf="@+id/horror_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/womens_fiction_chip"
+        app:layout_constraintTop_toBottomOf="@+id/lgbtq_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/young_adult_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/young_adult"
+        app:layout_constraintBottom_toTopOf="@+id/graphic_novel_chip"
+        app:layout_constraintEnd_toStartOf="@+id/magic_realism_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/short_story_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/horror_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/horror"
+        app:layout_constraintBottom_toTopOf="@+id/magic_realism_chip"
+        app:layout_constraintEnd_toStartOf="@+id/comedy_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/short_story_chip"
+        app:layout_constraintTop_toBottomOf="@+id/contemporary_fic_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/mystery_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mystery"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lit_fiction_chip"
+        app:layout_constraintTop_toBottomOf="@+id/new_adult_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/comedy_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comedy"
+        app:layout_constraintBottom_toTopOf="@+id/new_adult_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/horror_chip"
+        app:layout_constraintTop_toBottomOf="@+id/contemporary_fic_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/action_adv_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_adventure"
+        app:layout_constraintBottom_toTopOf="@+id/lgbtq_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/scifi_chip"
+        app:layout_constraintTop_toBottomOf="@+id/historical_fic_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/new_adult_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_adult"
+        app:layout_constraintBottom_toTopOf="@+id/mystery_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/magic_realism_chip"
+        app:layout_constraintTop_toBottomOf="@+id/comedy_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/scifi_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/science_fiction"
+        app:layout_constraintBottom_toTopOf="@+id/thriller_sus_chip"
+        app:layout_constraintEnd_toStartOf="@+id/action_adv_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dystopian_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/magic_realism_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/magical_realism"
+        app:layout_constraintBottom_toTopOf="@+id/lit_fiction_chip"
+        app:layout_constraintEnd_toStartOf="@+id/new_adult_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/young_adult_chip"
+        app:layout_constraintTop_toBottomOf="@+id/horror_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/lit_fiction_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/literary_fiction"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"
+        app:layout_constraintEnd_toStartOf="@+id/mystery_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/graphic_novel_chip"
+        app:layout_constraintTop_toBottomOf="@+id/magic_realism_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/fantasy_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fantasy"
+        app:layout_constraintBottom_toTopOf="@+id/scifi_chip"
+        app:layout_constraintEnd_toStartOf="@+id/dystopian_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/lgbtq_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lgbtq"
+        app:layout_constraintBottom_toTopOf="@+id/contemporary_fic_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/romance_chip"
+        app:layout_constraintTop_toBottomOf="@+id/action_adv_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/romance_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/romance"
+        app:layout_constraintBottom_toTopOf="@+id/contemporary_fic_chip"
+        app:layout_constraintEnd_toStartOf="@+id/lgbtq_chip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thriller_sus_chip"
+        app:layout_constraintTop_toBottomOf="@+id/action_adv_chip" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lit_fiction_chip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "Wherever You Are BookClubs"
+include ':app'
