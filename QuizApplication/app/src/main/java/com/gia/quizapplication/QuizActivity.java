@@ -119,15 +119,15 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-//    private void saveAnswer() {
-//
-//        if (questionCounter < questionCountTotal) {
-//            confirmNextButton.setText("Next");
-//
-//        }else{
-//            confirmNextButton.setText("Finish");
-//        }
-//    }
+    private void saveAnswer() {
+        int id = radioGroup.getCheckedRadioButtonId();
+        RadioButton saveRadioAnswer = findViewById(id);
+
+        String answers = saveRadioAnswer.getText().toString();
+
+
+
+    }
 
 
     private void showNextQuestion(){

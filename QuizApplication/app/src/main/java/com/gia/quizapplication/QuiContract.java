@@ -26,6 +26,7 @@ public final class QuiContract {
         public static final String COLUMN_OPTION_SIX = "optionSix";
         public static final String COLUMN_ANSWER_NUM = "answer_number";
         public static final String COLUMN_SAVE_ANSWER ="save answer";
+
         //public static final String COLUMN_DIFFICULTY = "difficulty";
     }
 }

@@ -36,25 +36,20 @@ public class QuizDBHelper  extends SQLiteOpenHelper {
                 QuestionsTable.COLUMN_OPTION_FOUR + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION_FIVE + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION_SIX + " TEXT, " +
-                QuestionsTable.COLUMN_ANSWER_NUM + " INTEGER" +
+                QuestionsTable.COLUMN_ANSWER_NUM + " INTEGER," +
+                QuestionsTable.COLUMN_SAVE_ANSWER + "TEXT" +
                 ")";
 
-//        final String storeAnswerTable = "CREATE TABLE " +
-//                QuestionsTable.TABLE_ANSWER + "( " +
-//                QuestionsTable._ID + " INTEGER PRIMARY KEY, " +
-//                QuestionsTable.COLUMN_QUESTIONS + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_ONE + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_TWO + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_THREE + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_FOUR + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_FIVE + " TEXT, " +
-//                QuestionsTable.COLUMN_OPTION_SIX + " TEXT, " +
-//                QuestionsTable.COLUMN_SAVE_ANSWER + "TEXT" +
-//                ")";
+        final String storeAnswerTable = "CREATE TABLE " +
+                QuestionsTable.TABLE_ANSWER + "( " +
+                QuestionsTable._ID + " INTEGER PRIMARY KEY, " +
+                QuestionsTable.COLUMN_QUESTIONS + " TEXT, " +
+                QuestionsTable.COLUMN_SAVE_ANSWER + "TEXT" +
+                ")";
 
 
         db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
-        //db.execSQL(storeAnswerTable);
+        db.execSQL(storeAnswerTable);
         fillQuestionsTable();
 
     }
@@ -77,7 +72,7 @@ public class QuizDBHelper  extends SQLiteOpenHelper {
         addQuestion(q3);
         QuestionModel q4 = new QuestionModel("What is your favorite book / tv show / movie genre?", "Thriller", "Comedy", "Mystery", "Drama", "Rom-Com","Other", 1);
         addQuestion(q4);
-        QuestionModel q5 = new QuestionModel("If we were to go on a date, what would we do?", "Hiking", "Dinner", "Lunch", "Cook a meal together", "Movie", "For you to know and me to find out", 1);
+        QuestionModel q5 = new QuestionModel("What is your favorite genre of music?", "Rock", "Hip Hop", "R&B", "Jazz", "Heavy Metal", "Pop", 1);
         addQuestion(q5);
     }
 
@@ -111,7 +106,6 @@ public class QuizDBHelper  extends SQLiteOpenHelper {
                 question.setOptionFour(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION_FOUR)));
                 question.setOptionFive(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION_FIVE)));
                 question.setOptionSix(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_OPTION_SIX)));
-                //question.setSaveAnswer(cursor.getString(cursor.getColumnIndex(QuestionsTable.COLUMN_SAVE_ANSWER)));
                 question.setAnswerNum(cursor.getInt(cursor.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NUM)));
 
                 questionModelList.add(question);

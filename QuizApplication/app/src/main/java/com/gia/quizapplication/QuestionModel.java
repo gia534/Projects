@@ -43,7 +43,6 @@ public class QuestionModel implements Parcelable {
         this.optionFour = optionFour;
         this.optionFive = optionFive;
         this.optionSix = optionSix;
-        this.answerNum = answerNum;
     }
     public QuestionModel(String saveAnswer){
         this.saveAnswer = saveAnswer;
