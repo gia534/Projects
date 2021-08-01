@@ -8,4 +8,4 @@ Projects that I am working on:
 
 - Transit Ticketing Application: https://github.com/gia534/2021AppDevelopmentProject
 
-- Quiz Application: Followed a tutorial to create a quiz application using SQLite. Will continue to grow on the application that will allow users to create their own quizzes. 
+- Trivia Minute android application: Followed a tutorial to create a quiz application using SQLite. The project now allows users to choose between 4 different difficulty levels. The application will be published shortly after all questions are created. Will continue to grow on the application that will allow users to create their own quizzes. 
