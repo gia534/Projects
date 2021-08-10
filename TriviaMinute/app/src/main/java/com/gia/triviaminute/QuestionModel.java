@@ -11,7 +11,7 @@ public class QuestionModel implements Parcelable {
     public static final String EASY_LEVEL ="Easy";
     public static final String MEDIUM_LEVEL ="Medium";
     public static final String HARD_LEVEL ="Hard";
-    public static final String EXTREMELY_HARD_LEVEL ="Extremely-hard";
+    public static final String EXTREMELY_HARD_LEVEL ="Difficult";
 
 
     private String question;
@@ -177,11 +177,4 @@ public class QuestionModel implements Parcelable {
                 EXTREMELY_HARD_LEVEL
         };
     }
-//    public String getSaveAnswer() {
-//        return saveAnswer;
-//    }
-//
-//    public void setSaveAnswer(String saveAnswer) {
-//        this.saveAnswer = saveAnswer;
-//    }
 }

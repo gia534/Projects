@@ -8,7 +8,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.PersistableBundle;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -32,7 +31,6 @@ public class QuizActivity extends AppCompatActivity {
     private TextView questionText;
     private TextView scoreText;
     private TextView questCountText;
-    private TextView levelText;
     private TextView countDownText;
     private RadioGroup radioGroup;
     private RadioButton radioOne;
@@ -42,7 +40,7 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton radioFive;
     private RadioButton radioSix;
     private Button confirmNextButton;
-    private ArrayList<QuestionModel> questionModelList;
+    public ArrayList<QuestionModel> questionModelList;
 
     // Changes color of radio button to red or green
     private ColorStateList textColorDefaultRb;
@@ -68,7 +66,7 @@ public class QuizActivity extends AppCompatActivity {
         scoreText = findViewById(R.id.textview_score);
         questionText = findViewById(R.id.textviewQuestions);
         questCountText = findViewById(R.id.textview_questionCounter);
-        levelText = findViewById(R.id.textview_difficulty_level);
+        TextView levelText = findViewById(R.id.textview_difficulty_level);
         countDownText = findViewById(R.id.textview_countDownTimer);
         radioGroup = findViewById(R.id.radioGroup);
         radioOne = findViewById(R.id.radioButtonOne);
@@ -91,9 +89,9 @@ public class QuizActivity extends AppCompatActivity {
 
         if (savedInstanceState == null){
             QuizDBHelper quizDBHelper = new QuizDBHelper(this);
-            questionModelList = quizDBHelper.getQuestions(difficulty);
+            questionModelList = quizDBHelper.retrieveQuestions(difficulty);
             questionCountTotal = questionModelList.size();
-            //Collections.shuffle(questionModelList);
+            Collections.shuffle(questionModelList);
             showNextQuestion();
         }else{
             questionModelList = savedInstanceState.getParcelableArrayList(QUESTION_KEY_LIST);
@@ -294,9 +292,8 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putInt(SCORE_KEY, score);
         outState.putInt(QUESTION_COUNT_KEY, questionCounter);
         outState.putLong(KEY_MILLIS_LEFT, timeLeftInMillis);

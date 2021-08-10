@@ -6,16 +6,20 @@
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
     <string name="extremely_hard">Extremely Hard</string>
-    <string name="answer_1">Answer 1 is Correct</string>
-    <string name="answer_2">Answer 2 is correct</string>
-    <string name="answer_3">Answer 3 is correct</string>
-    <string name="answer_4">Answer 4 is correct</string>
-    <string name="answer_5">Answer 5 is correct</string>
-    <string name="answer_6">Answer 6 is correct</string>
+    <string name="answer_1">Choice 1 is the correct answer</string>
+    <string name="answer_2">Choice 2 is the correct answer</string>
+    <string name="answer_3">Choice 3 is the correct answer</string>
+    <string name="answer_4">Choice 4 is the correct answer</string>
+    <string name="answer_5">Choice 5 is the correct answer</string>
+    <string name="answer_6">Choice 6 is the correct answer</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
     <string name="trivia_minute">Trivia Minute</string>
     <string name="high_score_0">High score: 0</string>
     <string name="start_quiz">Start Quiz</string>
     <string name="choose_a_difficulty_level">Choose a difficulty level:</string>
+    <string name="score_0">Score: 0</string>
+    <string name="question_1_out_of_x">Question: 1 out of x</string>
+    <string name="level">Level:</string>
+    <string name="_01_00">01:00</string>
 </resources>

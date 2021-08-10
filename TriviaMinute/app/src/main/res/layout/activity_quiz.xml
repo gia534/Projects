@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffcccb"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".QuizActivity">
 
@@ -12,27 +13,47 @@
         android:id="@+id/textview_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 0"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        android:freezesText="true"
+        android:text="@string/score_0"
         android:textColor="@android:color/black"
-        android:freezesText="true"/>
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textview_questionCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="36dp"
         android:layout_below="@+id/textview_score"
-        android:text="Question: 1 out of x"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="31dp"
+        android:freezesText="true"
+        android:text="@string/question_1_out_of_x"
         android:textColor="@android:color/black"
-        android:freezesText="true"/>
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textviewQuestions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_difficulty_level" />
 
     <TextView
         android:id="@+id/textview_difficulty_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_questionCounter"
-        android:text="Level: "
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:text="@string/level"
         android:textColor="@android:color/black"
-        android:freezesText="true"/>
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_score" />
 
     <TextView
         android:id="@+id/textview_countDownTimer"
@@ -40,81 +61,101 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:freezesText="true"
-        android:text="01:00"
+        android:text="@string/_01_00"
         android:textColor="@android:color/black"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textviewQuestions"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/radioGroup"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:freezesText="true"
         android:gravity="center_horizontal"
-        android:text="QUESTIONS"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="234dp"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        app:layout_constraintEnd_toEndOf="@+id/textviewQuestions"
+        app:layout_constraintTop_toBottomOf="@+id/textviewQuestions">
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 1" />
+            android:freezesText="true" />
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 2" />
+            android:freezesText="true" />
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 3" />
+            android:freezesText="true" />
 
         <RadioButton
             android:id="@+id/radioButtonFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 4" />
+            android:freezesText="true" />
 
         <RadioButton
             android:id="@+id/radioButtonFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 5" />
+            android:freezesText="true" />
 
         <RadioButton
             android:id="@+id/radioButtonSix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:freezesText="true"
-            android:text="Option 6" />
+            android:freezesText="true" />
 
     </RadioGroup>
 
     <Button
         android:id="@+id/confirm_next_button"
-        android:layout_width="378dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/radioGroup"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_button"
         android:freezesText="true"
-        android:text="@string/confirm" />
+        android:text="@string/confirm"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

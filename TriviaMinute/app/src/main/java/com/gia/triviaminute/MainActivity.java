@@ -16,14 +16,15 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.MessageFormat;
+
 
 public class MainActivity extends AppCompatActivity {
-    private Button startQuiz;
     private static final int REQUEST_CODE_QUIZ = 1;
 
-    public static final String EXTRA_DIFFICULTY = "extraDifficulty";
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String KEY_HIGH_SCORE = "High score";
+    public static final String EXTRA_DIFFICULTY = "difficulty";
+    public static final String SHARED_PREFS = "preferences";
+    public static final String KEY_HIGH_SCORE = "high score";
 
     private TextView highScoreTV;
     private int highScore;
@@ -38,19 +39,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //difficultyLevelATV = findViewById(R.id.difficultyLevel);
         highScoreTV = findViewById(R.id.highScoreTextview);
-        startQuiz = findViewById(R.id.startQuizButton);
-       difficultyLevelSpinner = findViewById(R.id.spinner);
+        Button startQuiz = findViewById(R.id.startQuizButton);
+        difficultyLevelSpinner = findViewById(R.id.spinner);
 
         String[] levels = QuestionModel.getAllDifficultyLevels();
         ArrayAdapter<String> adapterLevel = new ArrayAdapter<>(this,
                 R.layout.level_list_outline, levels);
         adapterLevel.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         difficultyLevelSpinner.setAdapter(adapterLevel);
-
-//        difficultyLevelATV.setText(adapterLevel.getItem(0));
-//        difficultyLevelATV.setAdapter(adapterLevel);
 
         loadHighScore();
 
@@ -59,15 +56,10 @@ public class MainActivity extends AppCompatActivity {
             Log.d("HELLO", "Start Quiz Button clicked");
         });
 
-        //startQuiz();
-
-        //startQuiz.setOnClickListener(v -> startQuiz());
-
     }
 
     private void startQuiz() {
         difficultyString = difficultyLevelSpinner.getSelectedItem().toString();
-//        difficultyString = difficultyLevelATV.getOnItemSelectedListener().toString();
         Intent startQuizIntent = new Intent(MainActivity.this, QuizActivity.class);
         startQuizIntent.putExtra(EXTRA_DIFFICULTY, difficultyString);
         startActivityForResult(startQuizIntent, REQUEST_CODE_QUIZ);
@@ -93,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
     private void  loadHighScore() {
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highScore = preferences.getInt(KEY_HIGH_SCORE, 0);
-        highScoreTV.setText("High score: " + highScore);
+        highScoreTV.setText(MessageFormat.format("High score: {0}", highScore));
 
     }
 
     private void updateHighScore(int newScore){
         highScore = newScore;
-        highScoreTV.setText("High score: " + highScore);
+        highScoreTV.setText(MessageFormat.format("High score: {0}", highScore));
 
         SharedPreferences preferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -107,8 +99,4 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-//    public void beginQuiz(View view) {
-//        startQuiz();
-//        Log.d("HELLO", "Start Quiz Button clicked");
-//    }
 }
