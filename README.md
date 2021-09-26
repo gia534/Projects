@@ -11,4 +11,5 @@ Android Application projects:
 
 
 Front-end devleoper projects (Some of these projects have been completed for school):
--A simple one page website that focuses on Birttany Howard, the singer: http://webpage.pace.edu/gg40467n/Assignment1/BrittanyHoward.html. This website includes videos and audio, and was written in HTML, CSS and Javascript.
+
+- A simple one page website that focuses on Birttany Howard, the singer: http://webpage.pace.edu/gg40467n/Assignment1/BrittanyHoward.html. This website includes videos and audio. It was written in HTML, CSS and Javascript.
