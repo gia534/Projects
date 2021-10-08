@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link href="Projects.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+<!-- Header and navigation bar-->
+<div class="navBar">
+    <header>
+        <h1>Ga&euml;lle Gilles</h1>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="item"><a href="Profile.html">About Me</a></li>
+                <li class="item"><a href="Projects.html">Projects</a></li>
+                <li class="item"><a href="Resume.html">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="burger"></span>
+                <span class="burger"></span>
+                <span class="burger"></span>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<div class="divProjects">
+    <h2>Projects</h2>
+</div>
+
+<div class="ticket">
+    <h3>Application name: NYCFTAeTix</h3>
+    <p>This application will allow users in the New York City area to purchase bus and train tickets on their android devices.
+        New York City currently does not have an application that will allow people to purchase transit tickets, despite New
+        York state having similar applications for buses and trains leaving and arriving at port authority, penn station and other
+        major transportation hubs. This application focus is to replace the need for a physical metro card.</p>
+</div>
+<div class="transitImages">
+    <img class="ftaImage" src="FTAeTix2.jpeg" alt="FTAeTix">
+    <img class="ftaImage"  src="NYCFTAeTix%20pic%204.jpeg" alt="FTAeTix">
+
+</div>
+<div class="tGame">
+    <h3>Application name: Trivia Minute</h3>
+    <p>Trivia Minute is a trivia game that allows users to answer a set of general trivia questions. Users can choose between four different difficulty
+    levels (Easy, Medium, Hard, and Difficult), with each level having a total of 30 questions. Users have to beat the one-minute clock and see if they can
+    answer all questions correctly.</p>
+</div>
+<div class="triviaImages">
+    <img src="Trivia%20Game%201.jpeg" alt="Trivia Game">
+    <img src="Trivia%20Game%202.jpeg" alt="Trivia Game">
+</div>
+
+<div class="footer">
+    <footer>
+        <p class="email">Email me at: <a href="mailto: gaellecgilles@gmail.com">gaellecgilles@gmail.com</a></p>
+        <p class="linkedin">Let's connect on Linkedin:
+            <a href="https://www.linkedin.com/in/gaelle-gilles" class="fa-fa-linkedin" target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </p>
+        <p class="github">Check out my projects on GitHub:
+            <a href="https://github.com/gia534/Projects" class="fa-fa-github" target="_blank">
+                <i class="fa fa-github-square"></i>
+            </a>
+        </p>
+    </footer>
+</div>
+
+<div class="backToTop">
+    <button onclick="topFunction()" id="scrollButton">Top</button>
+    <script>
+        scrollButton = document.getElementById("scrollButton");
+        window.onscroll = function (){
+            scrollFunction()
+        };
+        // This will show the button when the user scrolls down 20px from the top of the page
+        function  scrollFunction(){
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        }
+
+        // When the button is clicked go back to the top of the page
+
+        function topFunction(){
+            document.body.scrollTop = 0; // For safari browsers
+            document.documentElement.scrollTop = 0; // For chrome, firefox, IE, and Opera browsers
+        }
+    </script>
+</div>
+</body>
+<script src="Main.js"></script>
+</html>

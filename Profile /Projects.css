@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#A3A380, #EFEBCE);
+    /*background-color: #595959;*/
+}
+
+header{
+    padding: 20px;
+    width: 100%;
+    background-color: #A3A380;
+    font-family: Didot, serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.navigation{
+    text-align: center;
+}
+.menu{
+    padding: 15px;
+    margin-left: 20px;
+    list-style: none;
+    display: grid;
+    /*grid-gap: 10px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*gap: 10px;*/
+}
+
+.divProjects h2{
+    font-family: Didot, serif;
+    text-align: center;
+
+}
+.menu li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.menu li a:hover{
+    color: #D8A48F;
+}
+/*End header and menu*/
+
+/*Begin application images*/
+
+.transitImages{
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.transitImages img{
+    width: 100%;
+    height: auto;
+}
+
+.ticket{
+    margin: 50px;
+}
+
+.ticket p{
+    margin-left: 250px;
+    margin-right: 250px;
+    font-family: Didot, serif;
+    line-height: 30px;
+    font-size: 18px;
+}
+.ticket h3{
+    font-family: Didot, serif;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.triviaImages{
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.triviaImages img{
+    width: 100%;
+    height: 100%;
+}
+.tGame h3{
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: Didot, serif;
+}
+.tGame{
+    margin: 100px;
+}
+
+
+.tGame p{
+    margin-left: 250px;
+    margin-right: 250px;
+    font-family: Didot, serif;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/*End application images*/
+
+/*Begin footer section*/
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    text-align: center;
+    background-color: #EFEBCE;
+    padding: 50px;
+    margin-top: 25px;
+    font-size: 16px;
+    font-family: Didot, serif;
+}
+
+.email a{
+    text-decoration: none;
+    color: black;
+}
+
+.email a:hover{
+    color: #D8A48F;
+}
+.fa-fa-github{
+    font-size: 1.75em;
+    padding-left: 5px;
+}
+.fa-fa-linkedin{
+    font-size: 1.75em;
+    padding-left: 5px;
+}
+#scrollButton{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #685F74;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*End footer section*/
+
+@media (max-width: 500px) {
+
+    /*Hamburger menu*/
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+    }
+    .hamburger{
+        display: none;
+    }
+    .burger{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #685F74;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item{
+        margin-left: 80px;
+    }
+    .link{
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+    }
+    .menu{
+        position: fixed;
+        left: -140%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #685F74;
+        width: 90%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px #685F74;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+    .item{
+        margin: 15px 0;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .navigation:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .navigation:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .navigation:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*done with hamburger menu*/
+
+    /*Begin application images*/
+    .transitImages{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .ticket p{
+        margin-left: 25px;
+        margin-right: 25px;
+        font-family: Didot, serif;
+        line-height: 28px;
+        font-size: 18px;
+        text-indent: 25px;
+    }
+
+    .triviaImages{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .tGame p{
+        margin-left: 25px;
+        margin-right: 25px;
+        font-family: Didot, serif;
+        line-height: 28px;
+        font-size: 18px;
+        text-indent: 25px;
+    }
+
+    .tGame{
+        margin: 50px;
+    }
+    /*Start of Footer and Scroll Button*/
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        /*gap: 5px;*/
+        text-align: left;
+        background-color: #EFEBCE;
+        padding: 25px;
+        font-family: Didot, serif;
+
+    }
+
+
+    #scrollButton{
+        position: fixed;
+        bottom: 90px;
+        right: 60px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #685F74;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    /*End footer and scroll button*/
+}

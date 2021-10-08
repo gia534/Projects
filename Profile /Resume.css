@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#A3A380, #EFEBCE);
+    font-family: Didot, serif;
+}
+
+header{
+    padding: 20px;
+    width: 100%;
+    background-color: #A3A380;
+    font-family: Didot, serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.navigation{
+    text-align: center;
+}
+.menu{
+    padding: 10px;
+    margin-left: 20px;
+    list-style: none;
+    display: grid;
+    /*grid-gap: 10px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*gap: 10px;*/
+}
+.menu li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.menu li a:hover{
+    color: #D8A48F;
+}
+.h2{
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+}
+.schools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px 100px;
+}
+
+.schools div{
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 150px;
+}
+.schools h4{
+    margin-bottom: 15px;
+}
+
+.schools div li:not(:last-child){
+    margin-bottom: 4px;
+}
+
+/*Begin Experience section*/
+.experience{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px 100px;
+}
+
+.greatOaks{
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.adtalem{
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.experience div li:not(:last-child){
+    margin-bottom: 6px;
+}
+
+.end{
+    margin-bottom: 20px;
+}
+
+.end, .location, .start{
+    font-style: italic;
+    font-size: 11px;
+}
+
+.expInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 15px;
+    gap: 2px;
+
+}
+
+.collegeList{
+    list-style-image: url("school_black_18dp .svg");
+}
+.jobList{
+    margin-top: 15px;
+    list-style-image: url("work_black_18dp.svg");
+}
+/*End experience section*/
+
+/*Begin Tech Skills section*/
+
+.techSKills{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 50px 115px;
+}
+.techSKills div h4{
+    margin-bottom: 15px;
+
+}
+
+.techSKills div ul{
+    margin-left: 18px;
+}
+
+.techSKills div li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.dbmsList{
+    list-style-image: url("storage_black_18dp.svg");
+}
+
+.languageList{
+    list-style-image: url("code_black_18dp.svg");
+}
+
+.osList{
+    list-style-image: url("devices_black_18dp.svg");
+}
+
+.vcsList{
+    list-style-image: url("api_black_18dp.svg");
+}
+
+.softwareList{
+    list-style-image: url("api_black_18dp.svg");
+}
+/*end tech skills*/
+
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    text-align: center;
+    background-color: #EFEBCE;
+    padding: 50px;
+    font-family: Didot, serif;
+}
+#scrollButton{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #685F74;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.email a{
+    text-decoration: none;
+    color: black;
+}
+
+.email a:hover{
+    color: #D8A48F;
+}
+.fa-fa-github{
+    font-size: 1.75em;
+    padding-left: 5px;
+}
+.fa-fa-linkedin{
+    font-size: 1.75em;
+    padding-left: 5px;
+}
+
+@media (max-width: 500px) {
+    /*Hamburger menu*/
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+    }
+    .hamburger{
+        display: none;
+    }
+    .burger{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #685F74;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item{
+        margin-left: 80px;
+    }
+    .link{
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+    }
+    .menu{
+        position: fixed;
+        left: -140%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #685F74;
+        width: 90%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px #685F74;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+    .item{
+        margin: 15px 0;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .navigation:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .navigation:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .navigation:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*done with hamburger menu*/
+
+    .schools {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 15px;
+    }
+
+    .schools div{
+        margin: 0 auto;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+
+    /*Begin Experience section*/
+    .experience{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 35px;
+
+    }
+
+    .expInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px;
+        gap: 2px;
+    }
+
+    .end, .location, .start{
+        font-style: italic;
+        font-size: 13px;
+    }
+    /*End experience section*/
+
+
+    /*Begin Tech Skills section*/
+
+    .techSKills{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 80px;
+        gap: 35px;
+    }
+    /*End of tech skills*/
+
+    /*Start of Footer and Scroll Button*/
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        /*gap: 5px;*/
+        text-align: left;
+        background-color: #EFEBCE;
+        padding: 25px;
+        font-family: Didot, serif;
+
+    }
+
+
+    #scrollButton{
+        position: fixed;
+        bottom: 90px;
+        right: 60px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #685F74;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    /*End footer and scroll button*/
+}
