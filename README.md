@@ -13,4 +13,4 @@ Android Application projects:
 Front-end devleoper projects (Some of these projects have been completed for school):
 
 - A simple one page website that focuses on Birttany Howard, the singer: http://webpage.pace.edu/gg40467n/Assignment1/BrittanyHoward.html. This website includes videos and audio. It was written in HTML, CSS and Javascript.
-- My profile website: https://gia534.github.io/. To create this website I used the following languages: HTML, CSS, and Javascript. This website can be viewed on both computers and mobile devices. 
+- My profile website: https://gia534.github.io/. To create this website I used the following languages: HTML, CSS, and Javascript. This website can be viewed on both computers and mobile devices. (UPDATES TO MY WEBSITE IS COMING SOON!! Excited to show everyone how my website has improved over the past few months using Ionic and react)
