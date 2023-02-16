@@ -1,6 +1,8 @@
 # Projects
 This repository will house all of my projects that I am working on
 
+NEW APP:
+Tic - Tac - Toe Game written in Kotlin. Play against the computer and see if you can beat it!
 Android Application projects:
 
 - Transit Ticketing Application: https://github.com/gia534/2021AppDevelopmentProject
