@@ -1,7 +1,7 @@
 # Projects
 This repository will house all of my projects that I am working on
 
-NEW APP:
+NEW GAME:
 Tic - Tac - Toe Game written in Kotlin. Play against the computer and see if you can beat it!
 Android Application projects:
 
