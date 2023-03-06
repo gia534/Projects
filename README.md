@@ -12,4 +12,4 @@ Android Application projects:
 
 Front-end devleoper projects (Some of these projects have been completed for school):
 - My profile website: https://gia534.github.io/. To create this website I used the following languages: HTML, CSS, and Javascript. This website can be viewed on both computers and mobile devices. (As of February 25, updating my profile website using React. Will post update soon)
--Building a website for my fathers bagel shop: You can find the github to it here: https://github.com/Team2-Inwood-Bagels/Client-Application
+-Building a website for my fathers bagel shop: You can find the github to it here: https://github.com/Team2-Inwood-Bagels/Client-Application or here https://github.com/Team2-Inwood-Bagels/Admin-Application
